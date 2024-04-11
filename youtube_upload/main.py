@@ -223,7 +223,7 @@ def main(arguments):
     parser.add_option('', '--title-template', dest='title_template', type="string", default="{title} [{n}/{total}]", metavar="string", help='Template for multiple videos (default: {title} [{n}/{total}])')
     parser.add_option('', '--embeddable', dest='embeddable', default=True, help='Video is embeddable')
 
-    Authentication
+    # Authentication
     parser.add_option('', '--client-secrets', dest='client_secrets', type="string", help='Client secrets JSON file')
     parser.add_option('', '--credentials-file', dest='credentials_file', type="string", help='Credentials JSON file')
     parser.add_option('', '--auth-browser', dest='auth_browser', action='store_true', help='Open a GUI browser to authenticate if required')
