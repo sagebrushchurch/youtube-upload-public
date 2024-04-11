@@ -7,12 +7,11 @@
 """
 Upload a video to Youtube from the command-line.
 
-    $ youtube-upload --title="A.S. Mutter playing" \
-                     --description="Anne Sophie Mutter plays Beethoven" \
-                     --category=Music \
-                     --tags="mutter, beethoven" \
-                     anne_sophie_mutter.flv
-    pxzZ-fYjeYs
+    youtube-upload --title="A.S. Mutter playing" \
+      --description="Anne Sophie Mutter plays Beethoven" \
+      --category=Music \
+      --tags="mutter, beethoven" \
+      anne_sophie_mutter.flv
 """
 
 import os
@@ -235,9 +234,9 @@ def main(arguments):
 
     options, args = parser.parse_args(arguments)
 
-    if options.description_file is not None and os.path.exists(options.description_file):
-        with open(options.description_file, encoding="utf-8") as file:
-            options.description = file.read()
+    # if options.description_file is not None and os.path.exists(options.description_file):
+    #     with open(options.description_file, encoding="utf-8") as file:
+    #         options.description = file.read()
 
     try:
         run_main(parser, options, args)
