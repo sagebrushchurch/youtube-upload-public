@@ -15,13 +15,11 @@ You now must create and use [your own OAuth 2.0 file](https://developers.google.
 <details>
   <summary>Click here if you need to create one.</summary>
 
-* Go to the Google [console](https://console.developers.google.com/).
-* _Create project_.
-* Side menu: _APIs & auth_ -> _APIs_
-* Top menu: _Enabled API(s)_: Enable all Youtube APIs.
-* Side menu: _APIs & auth_ -> _Credentials_.
-* _Create a Client ID_: Add credentials -> OAuth 2.0 Client ID -> Other -> Name: youtube-upload -> Create -> OK
-* _Download JSON_: Under the section "OAuth 2.0 client IDs". Save the file to `~/.client_secrets.json`.
+- Go to the Google [console](https://console.developers.google.com/).
+- _Create project_.
+- _Getting Started_ -> _Explore and enable APIs_ -> _APIs_ -> _Credentials_.
+- _Create a Client ID_: Create Credentials -> OAuth client ID -> Desktop App -> Name: youtube-upload -> Create -> OK
+- _Download JSON_: Under the section "OAuth 2.0 client IDs". Save the file to `~/.client_secrets.json`.
 </details>
 
 ## Install
@@ -32,20 +30,21 @@ You now must create and use [your own OAuth 2.0 file](https://developers.google.
 <details>
   <summary>Click here if you're a rebel.</summary>
 
-* Install the python dependencies
+- Install the python dependencies
 
 ```
 sudo pip3 install --upgrade google-api-python-client oauth2client
 ```
 
-* Make sure `my_credentials.json` and `.client_secrets.json` are both located in your **home folder**.
+- Make sure `my_credentials.json` and `.client_secrets.json` are both located in your **home folder**.
 </details>
 
-* Set `scriptman.service` with the correct `CAMPUS` environment variable.
+- Set `scriptman.service` with the correct `CAMPUS` environment variable.
 
 ```
 sudo nano /etc/systemd/system/scriptman.service
 ```
+
 and set where you see `Environment=CAMPUS=""` enter the name of the campus in the quotes.
 Example: `Environment=CAMPUS="Riverside"`
 
